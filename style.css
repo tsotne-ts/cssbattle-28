@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.witch-hat {
+  background: #f4dcbf;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.brim {
+  width: 150px;
+  height: 60px;
+  background: #30383f;
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  overflow: hidden;
+}
+
+.brim::before {
+  content: "";
+  position: absolute;
+  width: 142px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 10px 0 0 #556d7f;
+  top: -25px;
+  left: 3xpx;
+}
+.brim::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  border-radius: 20%;
+  background: #fbd038;
+  top: 20px;
+  left: 60px;
+}
+.crown {
+  border-left: 44px solid transparent;
+  border-right: 44px solid transparent;
+  border-bottom: 150px solid #30383f;
+  position: absolute;
+  top: 15px;
+  left: 90px;
+}
+
+.pumpkin {
+  background: #784972;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.inner,
+.left,
+.leftmost,
+.right,
+.rightmost,
+.pumpkin-head {
+  background: #f7ffcf;
+  height: 150px;
+  width: 100px;
+  border-radius: 50%;
+  border: 11px solid #784972;
+  position: absolute;
+  top: 90px;
+  left: 100px;
+  z-index: 3;
+}
+.left {
+  position: absolute;
+  left: 140px;
+  z-index: 2;
+}
+.leftmost {
+  position: absolute;
+  z-index: 1;
+  left: 180px;
+}
+.right {
+  position: absolute;
+  z-index: 2;
+  left: 60px;
+}
+.rightmost {
+  z-index: 1;
+  left: 20px;
+}
+
+.pumpkin-head {
+  position: absolute;
+  border: none;
+  height: 90px;
+  width: 22px;
+  border-radius: 50%;
+  top: 50px;
+  left: 139px;
+  z-index: 3;
+}
+
+.crossbones {
+  background: #efeb99;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.first-cross {
+  background: #8647e6;
+  position: absolute;
+  height: 190px;
+  width: 30px;
+  top: 50px;
+  left: 140px;
+  rotate: 45deg;
+}
+.second-cross {
+  background: #8647e6;
+  position: absolute;
+  height: 190px;
+  width: 30px;
+  top: 50px;
+  left: 140px;
+  rotate: -45deg;
+}
+.ending {
+  background: #8647e6;
+  position: absolute;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  top: -16px;
+  left: 15px;
+  box-shadow: -32px -1px #8647e6, 0 200px#8647E6, -32px 200px#8647E6;
+}
+
+.hockey-mask {
+  background: #a5b5b4;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+.hockey-mask > * {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  width: 150px;
+  height: 179.9px;
+  background: #fff;
+}
+.hockey-mask > *:after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: #000;
+  top: 50px;
+  left: 25px;
+  box-shadow: 21.2px 42.3px 0 -10.5px, 21.2px 63.5px 0 -10.5px,
+    21px 84.6px 0 -10.5px, 21px -42.4px 0 -10.5px, 37px -20.9px 0 -10.5px;
+  -webkit-box-reflect: right 42px;
+}
+.hockey-mask > *,
+.hockey-mask > *:after {
+  border-radius: 50%;
+}
+
+.evil-cat {
+  background: #ed6a9d;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.cat-head {
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  width: 180px;
+  height: 150px;
+  border-radius: 50%;
+  background: #050044;
+}
+
+.right-ear {
+  position: absolute;
+  width: 140px;
+  height: 90px;
+  clip-path: polygon(100% 61%, 40% 0, 44% 100%);
+  top: 60px;
+  left: 110px;
+  rotate: 60deg;
+  border-radius: 50%;
+  background: #050044;
+}
+
+.left-ear {
+  position: absolute;
+  width: 140px;
+  height: 90px;
+  clip-path: polygon(100% 61%, 40% 0, 44% 100%);
+  top: 71px;
+  left: 11px;
+  border-radius: 50%;
+  background: #050044;
+}
+
+.eye-body {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #ffc100;
+  top: 130px;
+  left: 85px;
+  border-radius: 50% 0;
+  rotate: 45deg;
+  box-shadow: 52px -52px #ffc100;
+}
+
+.pupil {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  top: 135px;
+  left: 100px;
+  box-shadow: 74px 0 #050044;
+  border-radius: 50%;
+  background: #050044;
+}
+
+.mouth {
+  position: absolute;
+  height: 15px;
+  width: 28px;
+  background: #ed6a9d;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  top: 185px;
+  left: 125px;
+}
+
+.castlevania {
+  background: #a6d6ae;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.a {
+  position: absolute;
+  background: #3a0f09;
+  width: 200px;
+  height: 120px;
+  top: 100px;
+  left: 50px;
+}
+.caste-gate {
+  position: absolute;
+  height: 50px;
+  width: 60px;
+  background: #bb9213;
+  top: 170px;
+  left: 118px;
+  border-radius: 50px 50px 0 0;
+}
+.castle-window {
+  position: absolute;
+  height: 25px;
+  width: 20px;
+  background: #bb9213;
+  top: 113px;
+  left: 63px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 154px 0#BB9213;
+}
+.castle-roof {
+  position: absolute;
+  background: #3a0f09;
+  border-style: solid;
+  border-color: #a6d6ae #a6d6ae #3a0f09 #a6d6ae;
+  border-width: 0 42px 65px 43px;
+  top: 35px;
+  left: 30px;
+  -webkit-box-reflect: right 67px;
+}
+
+.castle-roof-inner {
+  position: absolute;
+  background: #3a0f09;
+  border-style: solid;
+  border-color: #a6d6ae #a6d6ae #3a0f09 #a6d6ae;
+  border-width: 0 53px 38px 53px;
+  top: 100px;
+  left: 98px;
+}
+
+.frankenstein {
+  background: #3c8d3f;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+.frankenstein-head {
+  position: absolute;
+  background: #1a1d2f;
+  top: 75px;
+  left: 80px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(#1a1d2f 20px, #14f078 0);
+  border-radius: 15px 15px 121px 121px;
+  overflow: hidden;
+}
+
+.frankenstein-hairs {
+  height: 30px;
+  background: #1a1d2f;
+  color: #1a1d2f;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 30px;
+  rotate: 45deg;
+  box-shadow: 22.4px -22.4px, 44.8px -44.8px, 67.2px -67.2px, 89.6px -89.6px;
+}
+.frankenstein-eyes {
+  width: 20px;
+  position: absolute;
+  top: 145px;
+  left: 118px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 5px solid #1a1d2f;
+  -webkit-box-reflect: right 39px;
+}
+.frankenstein-mouth {
+  position: absolute;
+  background: #1a1d2f;
+  height: 20px;
+  width: 40px;
+  border-radius: 0 0 42px 42px;
+  top: 177px;
+  left: 136px;
+}
+.frankenstein-ear-outer {
+  height: 30px;
+  position: absolute;
+  background: #1a1d2f;
+  top: 125px;
+  left: 54px;
+  width: 10px;
+  border-radius: 9px;
+  box-shadow: 192px 0 #1a1d2f;
+}
+.frankenstein-ear-inner {
+  width: 10px;
+  position: absolute;
+  background: #1a1d2f;
+  height: 25px;
+  rotate: 90deg;
+  left: 62px;
+  top: 128px;
+  box-shadow: 0 -176px #1a1d2f;
+}
+
+.candy {
+  background: #cbe8dd;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.candy-body {
+  position: absolute;
+  top: 100px;
+  left: 55px;
+  background: #007192;
+  width: 180px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.candy-stripes {
+  position: absolute;
+  background: #cbe8dd;
+  width: 10px;
+  height: 140px;
+  top: 90px;
+  left: 100px;
+  rotate: 20deg;
+  color: #cbe8dd;
+  box-shadow: 20px -10px, 40px -10px, 60px -20px, 80px -30px;
+}
+.candy-left-part {
+  position: absolute;
+  background: #007192;
+  top: 87px;
+  left: 25px;
+  height: 103px;
+  width: 30px;
+  clip-path: polygon(0 23%, 0 100%, 100% 71%, 100% 51%);
+}
+.candy-right-part {
+  position: absolute;
+  background: #007192;
+  top: 110px;
+  left: 235px;
+  rotate: 180deg;
+  height: 103px;
+  width: 30px;
+  clip-path: polygon(0 23%, 0 100%, 100% 71%, 100% 51%);
+}
